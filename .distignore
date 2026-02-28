@@ -1,0 +1,25 @@
+# Dependencies only (SPA source and build config are included for "minified with source")
+node_modules/
+admin/spa/node_modules/
+admin/spa/.vite/
+admin/spa/.gitignore
+admin/spa/.vscode
+
+# Internal docs (not for plugin zip)
+publish-wordpress-plugin-wordpress-org.md
+
+# WordPress.org assets (deployed to /assets via ASSETS_DIR)
+screenshots/
+
+# Repo / tooling
+.git/
+.github/
+.gitignore
+.gitattributes
+.distignore
+*.zip
+*.log
+.DS_Store
+deploy-preview/
+preview-deploy.sh
+pack-plugin.sh

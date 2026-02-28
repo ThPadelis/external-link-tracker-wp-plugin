@@ -1,0 +1,45 @@
+name: Deploy to WordPress.org
+
+on:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install deps
+        working-directory: admin/spa
+        run: npm ci
+
+      - name: Build assets
+        working-directory: admin/spa
+        run: npm run build
+
+      - name: Deploy to WordPress.org SVN
+        id: deploy
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: external-link-tracker
+          ASSETS_DIR: screenshots
+        with:
+          generate-zip: true
+
+      - name: Upload plugin zip artifact
+        if: success() && steps.deploy.outputs.zip-path != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: wordpress-plugin
+          path: ${{ steps.deploy.outputs.zip-path }}

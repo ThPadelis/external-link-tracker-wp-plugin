@@ -1,0 +1,212 @@
+.elt-spa {
+  margin-top: 12px;
+}
+
+.elt-tabs {
+  border-bottom: 1px solid #c3c4c7;
+  display: flex;
+  gap: 8px;
+}
+
+.elt-tab {
+  background: #f6f7f7;
+  border: 1px solid #c3c4c7;
+  border-bottom: none;
+  cursor: pointer;
+  margin-bottom: -1px;
+  padding: 8px 14px;
+}
+
+.elt-tab.is-active {
+  background: #fff;
+  font-weight: 600;
+}
+
+.elt-filters {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.elt-filters label {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.elt-table {
+  margin-top: 8px;
+}
+
+.elt-table-state {
+  align-items: center;
+  background: #fff;
+  border: 1px solid #dcdcde;
+  border-radius: 4px;
+  color: #1d2327;
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 14px 16px;
+}
+
+.elt-table-state.is-error {
+  border-color: #d63638;
+  color: #8a2424;
+}
+
+.elt-table-state.is-empty {
+  color: #50575e;
+}
+
+.elt-table-refreshing {
+  align-items: center;
+  color: #50575e;
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.elt-state-icon {
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
+.elt-spin {
+  animation: elt-spin 1s linear infinite;
+}
+
+@keyframes elt-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.elt-pagination {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.elt-pagination-per-page {
+  margin-right: 24px;
+  padding-right: 24px;
+  border-right: 1px solid #c3c4c7;
+}
+
+.elt-pagination-per-page label {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.elt-pagination-select {
+  appearance: auto;
+  -webkit-appearance: menulist;
+  -moz-appearance: menulist;
+  min-width: 64px;
+  padding: 6px 24px 6px 10px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #1d2327;
+  background-color: #fff;
+  border: 1px solid #8c8f94;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.elt-pagination-select:hover:not(:disabled) {
+  border-color: #1d2327;
+}
+
+.elt-pagination-select:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.elt-pagination-select:focus {
+  border-color: #2271b1;
+  outline: 2px solid transparent;
+  box-shadow: 0 0 0 1px #2271b1;
+}
+
+.elt-pagination-range {
+  color: #50575e;
+  font-size: 0.95em;
+}
+
+.elt-pagination-nav {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+}
+
+.elt-pagination-btn {
+  align-items: center;
+  background: #f6f7f7;
+  border: 1px solid #c3c4c7;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-flex;
+  padding: 4px 8px;
+}
+
+.elt-pagination-btn:hover:not(:disabled) {
+  background: #fff;
+  border-color: #8c8f94;
+}
+
+.elt-pagination-btn:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.elt-pagination-icon {
+  display: block;
+}
+
+.elt-pagination-jump {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  margin-left: 8px;
+}
+
+.elt-pagination-input {
+  width: 56px;
+  padding: 4px 6px;
+  text-align: right;
+}
+
+.elt-pagination-go {
+  margin-left: 4px;
+}
+
+/* Sortable table headers */
+.elt-th-sortable {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.elt-th-sortable:hover {
+  background: #f0f0f1;
+}
+
+.elt-th-label {
+  margin-right: 4px;
+}
+
+.elt-th-sort {
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+.elt-sort-icon {
+  display: block;
+}

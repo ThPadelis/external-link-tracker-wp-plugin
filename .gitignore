@@ -1,0 +1,33 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / editor
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependencies
+node_modules/
+
+# Build / package artifacts
+*.zip
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# PHP (Composer)
+vendor/
+
+# Vite / SPA (if build output ever goes under spa/)
+admin/spa/dist/
+admin/dist/
+
+# Preview deploy
+deploy-preview/
