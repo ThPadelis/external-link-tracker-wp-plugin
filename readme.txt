@@ -1,6 +1,6 @@
 === External Link Tracker ===
 Contributors: ptheodosiou
-Tags: links, external links, analytics, outbound, tracking, click tracking
+Tags: links, external links, analytics, outbound, tracking
 Requires at least: 5.0
 Tested up to: 6.9
 Requires PHP: 5.6
